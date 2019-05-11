@@ -1,0 +1,190 @@
+/*            GENERAL             */
+body {
+    background-color: #f8f8f8;
+    background-image: url(../images/strawberry-leaf.png),
+        url(../images/leaf.png), url(../images/slice-strawberry.png);
+
+    background-position: 103% 10%, -2% 40%, 35% 6%;
+    background-size: 13% 11%, 6% 6%, 8% 6%;
+
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: 'Bebus';
+    src: url(../fonts/BebasNeueBold.otf);
+}
+
+ul {
+    list-style: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/*                               NAVBAR                               */
+
+.nav-row {
+    padding: 0 5%;
+    padding-top: 2%;
+}
+
+.social {
+    display: none;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+    font-weight: 600;
+}
+
+.navbar-toggler {
+    margin: 0;
+    padding: 0;
+}
+.logo img {
+    max-width: 70%;
+    height: auto;
+}
+
+/*                        product AND INGREDIENTS                    */
+
+/* .product {
+  width: 100%;
+  position: absolute;
+  z-index: 20;
+  pointer-events: none;
+  top: 8%;
+} */
+
+.product-image {
+    width: 60%;
+    position: absolute;
+    z-index: 10;
+    top: 25%;
+    left: 65%;
+    transition: transform 1s linear;
+}
+/* PRODUCT TRANSTIONS - USE IN JAVASCRIPT */
+.product-image.move-1 {
+    transform: rotate(-12deg) translateX(-14%) translateY(3%);
+}
+.product-image.move-2 {
+    transform: rotate(-24deg) translateX(-28%) translateY(6%);
+}
+.product-image.move-3 {
+    transform: rotate(-36deg) translateX(-42%) translateY(12%);
+}
+.product-image.move-4 {
+    transform: rotate(-48deg) translateX(-56%) translateY(15%);
+}
+.product-image.move-5 {
+    transform: rotate(-60deg) translateX(-70%) translateY(17.5%);
+}
+.product-image.move-6 {
+    transform: rotate(-72deg) translateX(-84%) translateY(20%);
+}
+.product-image.move-7 {
+    transform: rotate(-90deg) translateX(-100%) translateY(25%);
+}
+
+/*                DETAILS                             */
+.product-name {
+    padding-top: 20%;
+    padding-left: 5%;
+    padding-right: 10%;
+    color: #ff6666;
+}
+.product-name > h1 {
+    font-size: 5rem;
+    font-family: 'Bebus', sans-serif;
+}
+
+.product-name-main {
+    display: block;
+}
+
+.details {
+    padding: 0% 8%;
+}
+.detail {
+    font-size: 0.8125rem;
+}
+
+/*                   FILLER               */
+
+.next-product {
+    background-color: white;
+    background-image: url(../images/bg-strawberry.png);
+    background-size: cover;
+    background-position: left;
+    height: 60vh;
+}
+.next-product-text > h1 {
+    color: rgb(85, 81, 81);
+    font-weight: bold;
+    font-size: 60px;
+}
+
+.next-button {
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+    padding: 0 1vw;
+}
+
+.next-product-image {
+    height: 10vh;
+}
+
+/*                Tablet and Above         */
+@media only screen and (min-width: 480px) {
+    .product-name {
+        padding-top: 5%;
+        padding-left: 6%;
+        padding-right: 10%;
+    }
+    .product-name > h1 {
+        font-size: 6.25rem;
+    }
+
+    .product {
+        top: 15%;
+    }
+    .product-image {
+        width: 25%;
+    }
+}
+
+/*                Desktop Media CSS          */
+
+@media only screen and (min-width: 1200px) {
+    .details {
+        padding-top: 5vw;
+    }
+    .detail {
+        padding: 2vw 0;
+        font-size: 1vw;
+    }
+    .detail > h5 {
+        font-size: 1.7vw;
+    }
+
+    .product-name > h1 {
+        font-size: 14vw;
+    }
+    .next-product {
+        padding-top: 20vh;
+    }
+    .next-product-text > h1 {
+        font-size: 5vw;
+    }
+    .next-button {
+        font-size: 2.2vw;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        font-size: 1vw;
+        padding: 0 1.5vw;
+    }
+}

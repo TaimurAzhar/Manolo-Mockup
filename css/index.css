@@ -1,0 +1,238 @@
+/*            Mobile Display CSS            */
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+}
+ul {
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'Montserrat-Black';
+    src: url(../fonts/Montserrat-Black.otf);
+}
+
+/*                                    TOP-ONLY - NAV */
+
+.top-section {
+    background-color: #ff6666;
+    background-position: center;
+    background-size: cover;
+    height: 70%;
+    width: 100%;
+    position: fixed;
+    z-index: 50;
+    box-shadow: 0.5vw 0.5vw 3vw #807e7e;
+    padding: 0 4%;
+    padding-top: 2%;
+    transition: background-color 300ms ease-in-out;
+}
+.top-section .top-logo {
+    transition: opacity 400ms ease-in-out;
+}
+
+.top-section .top-logo.hide {
+    opacity: 0;
+}
+#description-row {
+    height: 65%;
+}
+
+.description {
+    color: white;
+    font-size: 13px;
+}
+.description:first-child::before {
+    content: 'About';
+    font-size: 30px;
+}
+
+#description-row li {
+    margin: 10px 0;
+}
+
+.top-section .navbar-light .navbar-nav .nav-link {
+    color: white;
+    padding: 0.5rem 1.5vw;
+    font-weight: bold;
+}
+
+/*                                    NAVBAR                      */
+
+#nav {
+    background-color: #ff6666;
+
+    height: 50%;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    box-shadow: 0.5vw 0.5vw 3vw #807e7e;
+    padding: 0 4%;
+    padding-top: 2%;
+    transition: background-color 400ms ease;
+}
+
+.top-logo > img,
+.logo > img {
+    max-width: 50%;
+    height: auto;
+}
+
+.nav-row {
+    height: 35%;
+}
+#nav .navbar-light .navbar-nav .nav-link {
+    color: white;
+    padding: 0.5rem 1.5vw;
+    font-weight: bold;
+}
+
+.navbar-toggler {
+    margin: 0;
+    padding: 0;
+}
+
+#nav #product-name-row {
+    height: 65%;
+}
+
+#product-name-row h1 {
+    font-size: 4rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: -0.3vw;
+}
+
+.product-name-main {
+    color: white;
+    display: block;
+}
+.product-name-common {
+    color: black;
+}
+#nav .name-text {
+    color: white;
+}
+
+/*                                PRODUCT - COMMON                    */
+
+.product {
+    width: 100%;
+    position: absolute;
+    z-index: 15;
+    pointer-events: none;
+}
+
+.product-image {
+    width: 50%;
+    position: relative;
+    pointer-events: auto;
+}
+
+/* All bg-common will scroll bu teaser-bg will not so treated seperately */
+.bg-common,
+.teaser-bg {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top;
+    background-repeat: repeat-y;
+    height: 100%;
+    width: 100%;
+}
+
+/*                              TEASER                    */
+
+.teaser {
+    top: 50%;
+    transition: transform 800ms cubic-bezier(0.07, 0.35, 0.72, 0.96);
+}
+/* transition class for teaser image */
+
+.teaser.scroll-down {
+    transform: translateY(100%);
+}
+
+.teaser-bg {
+    background-image: url(../images/main-bg-texture.jpg);
+}
+
+/*                                BACKGROUNDS                           */
+
+.bg1 {
+    background-image: url(../images/bg-strawberry.png);
+}
+
+.bg2 {
+    background-image: url(../images/bg-caramel.png);
+}
+
+.bg3 {
+    background-image: url(../images/bg-strawberry.png);
+}
+
+#product-2 {
+    top: 233%;
+}
+
+/*                Laptop and above Media CSS          */
+@media only screen and (min-width: 480px) {
+    .description {
+        font-size: 12px;
+    }
+
+    .teaser {
+        top: 30%;
+    }
+
+    #product-2 {
+        top: 215%;
+    }
+
+    #product-3 {
+        top: 315%;
+    }
+
+    #product-4 {
+        top: 415%;
+    }
+
+    #product-5 {
+        top: 515%;
+    }
+
+    #product-6 {
+        top: 615%;
+    }
+
+    .product-image {
+        width: 35%;
+    }
+}
+
+/*                Desktop Media CSS          */
+
+@media only screen and (min-width: 1200px) {
+    .top-section .navbar-light .navbar-nav .nav-link {
+        font-size: 1vw;
+    }
+    #nav .navbar-light .navbar-nav .nav-link {
+        font-size: 1vw;
+    }
+    .description {
+        font-size: 1vw;
+    }
+    .description:first-child::before {
+        font-size: 2vw;
+    }
+
+    /* transition class for teaser image */
+    .teaser.scroll-down {
+        transform: translateY(85vh);
+    }
+    #product-name-row h1 {
+        font-size: 5vw;
+    }
+}
